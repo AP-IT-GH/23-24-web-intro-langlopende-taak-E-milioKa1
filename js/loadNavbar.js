@@ -20,7 +20,7 @@
                             <a class="nav-link click-scroll" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="about.html">About</a>
+                            <a class="nav-link click-scroll" href="topic.html">Topic</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="diensten.html">Diensten</a>
@@ -75,7 +75,7 @@
                             </li>
     
                             <li class="site-footer-link-item">
-                                <a href="about.html" class="site-footer-link">About</a>
+                                <a href="about.html" class="site-footer-link">Topic</a>
                             </li>
     
                             <li class="site-footer-link-item">
@@ -88,10 +88,10 @@
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <h5 class="site-footer-title mb-3">Have a question?</h5>
+                        <h5 class="site-footer-title mb-3">Graduaat IoT</h5>
                         <p class="text-white d-flex mb-1">
                             <a href="tel: 0486568296" class="site-footer-link">
-                                048-656-8296
+                                Emilio Pepa
                             </a>
                         </p>
                         <p class="text-white d-flex">
@@ -112,10 +112,6 @@
             <div class="site-footer-bottom">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-12 mt-5">
-                            <p class="copyright-text">Copyright © 2024 Neona Inc</p>
-                            <p class="copyright-text">Distributed by: Nova Cities</p>
-                        </div>
                         <div class="col-lg-8 col-12 mt-lg-5">
                             <ul class="site-footer-links">
                                 <li class="site-footer-link-item">
