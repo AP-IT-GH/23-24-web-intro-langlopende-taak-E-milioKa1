@@ -58,17 +58,43 @@ a {
 
 a:hover {
     color: var(--secondary-color);
+    border-radius: 70%;
 }
 
 /* Navigation */
 .navbar {
     /*background: transparent;*/
     background: var(--nav-background-color);
-    /*z-index: 1000; !* Higher index to keep navbar above all other content *!*/
+    z-index: 1000; /* Higher index to keep navbar above all other content */
     /*position: fixed; !* Fixes navbar to the top of the screen *!*/
     /*top: 0;*/
     /*left: 0;*/
     /*width: 100%; !* Ensures the navbar spans the full width of the viewport *!*/
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--nav-background-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: var(--secondary-color);
+    border-radius: 0;
 }
 
 .navbar-brand,
@@ -79,7 +105,7 @@ a:hover {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    border-radius: var(--border-radius-large);
+    border-radius: 100px;
     margin: 10px;
     padding: 10px 20px;
 }
@@ -334,22 +360,35 @@ a:hover {
 /*
     DIENSTEN
  */
-.diensten-section {
+.diensten-section, .dienst-section  {
     text-align: center;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    background-image: url("../assets/images/diensten/lightbulb.jpg");
     padding: 30px;
     margin-bottom: 30px;
     max-width: 85%;
-    color: var(--white-color)
+    color: var(--white-color);
+    z-index: 4;
 }
-
+.diensten-section {
+    background-image: url("../assets/images/diensten/lightbulb.jpg");
+}
+.dienst-section {
+    background-image: url("../assets/images/diensten/background-diensten.jpg");
+}
+.dienst-image {
+    width: 100%;
+}
+.dienst-section li {
+    text-align: left;
+    padding-bottom: 5px;
+}
 .content-title {
     position: relative;
     bottom: 66px;
     text-align: center;
+    z-index: 3;
 }
 .content-title span {
     background: #009ff5;
@@ -382,49 +421,6 @@ a:hover {
 
 .dienst a:hover h6{
     background-color: var(--secondary-color);
-}
-
-.dienst {
-    position: relative;
-    cursor: pointer;
-}
-.tooltip {
-    display: none; /* Verborgen totdat deze wordt gehoverd */
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    z-index: 1001;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.dienst:hover .tooltip {
-    display: block !important; /* Forceert de tooltip om te tonen, zelfs als andere stijlen dit proberen te overschrijven */
-}
-
-.dienst:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 100%;
-    white-space: nowrap;
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 6px;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.dienst:hover::after {
-    opacity: 1;
 }
 
 /*---------------------------------------
@@ -515,6 +511,73 @@ a:hover {
 .diensten-mobile-lightbulb {
     display: none;
 }
+
+/*.tooltip {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.tooltip .tooltiptext {*/
+/*    visibility: hidden;*/
+/*    width: 120px;*/
+/*    background-color: var(--dark-color);*/
+/*    color: #fff;*/
+/*    text-align: center;*/
+/*    padding: 5px 0;*/
+/*    border-radius: 6px;*/
+/*    position: absolute;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.tooltip:hover .tooltiptext {*/
+/*    visibility: visible;*/
+/*}*/
+
+
+.dienst {
+    position: relative;
+    cursor: pointer;
+}
+.tooltip {
+    display: none; /* Verborgen totdat deze wordt gehoverd */
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    z-index: 1001;
+    text-align: center;
+    white-space: nowrap;
+    display: none;
+}
+
+.dienst:hover .tooltip {
+    display: block !important; /* Forceert de tooltip om te tonen, zelfs als andere stijlen dit proberen te overschrijven */
+}
+
+.dienst:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dienst:hover::after {
+    opacity: 1;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 991px) {
     h1 {
@@ -539,6 +602,9 @@ a:hover {
     .diensten-section {
         background-image: none;
     }
+    .dienst-section {
+        bottom: 0;
+    }
     .diensten-links, .diensten-rechts {
         text-align: center;
         padding-top: 20px;
@@ -550,7 +616,7 @@ a:hover {
     .diensten-mobile-lightbulb {
         display: block;
     }
-    .content-title {
+    .diensten-section .content-title {
         bottom: -30px;
     }
 }

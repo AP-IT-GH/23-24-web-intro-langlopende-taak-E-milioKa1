@@ -22,8 +22,16 @@
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="topic.html">Topic</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a class="nav-link click-scroll" href="diensten.html">Diensten</a>
+                            <div class="dropdown-content">
+                              <a href="mobiliteit.html">Mobiliteit</a>
+                              <a href="milieu.html">Milieu</a>
+                              <a href="verkeer.html">Verkeer</a>
+                              <a href="energie.html">Energie</a>
+                              <a href="veiligheid.html">Veiligheid</a>
+                              <a href="afval.html">Afval</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="contact.html">Contact</a>
