@@ -383,6 +383,50 @@ a:hover {
 .dienst a:hover h6{
     background-color: var(--secondary-color);
 }
+
+.dienst {
+    position: relative;
+    cursor: pointer;
+}
+.tooltip {
+    display: none; /* Verborgen totdat deze wordt gehoverd */
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    z-index: 1001;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.dienst:hover .tooltip {
+    display: block !important; /* Forceert de tooltip om te tonen, zelfs als andere stijlen dit proberen te overschrijven */
+}
+
+.dienst:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dienst:hover::after {
+    opacity: 1;
+}
+
 /*---------------------------------------
   SITE FOOTER
 -----------------------------------------*/

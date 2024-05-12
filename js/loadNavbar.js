@@ -75,7 +75,7 @@
                             </li>
     
                             <li class="site-footer-link-item">
-                                <a href="about.html" class="site-footer-link">Topic</a>
+                                <a href="topic.html" class="site-footer-link">Topic</a>
                             </li>
     
                             <li class="site-footer-link-item">
@@ -88,7 +88,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <h5 class="site-footer-title mb-3">Graduaat IoT</h5>
+                        <h5 class="site-footer-title mb-3">Graduaat IoT D1</h5>
                         <p class="text-white d-flex mb-1">
                             <a href="tel: 0486568296" class="site-footer-link">
                                 Emilio Pepa
@@ -96,7 +96,7 @@
                         </p>
                         <p class="text-white d-flex">
                             <a href="mailto:Emilio_ka1@hotmail.com" class="site-footer-link">
-                                Emilio_ka1@hotmail.com
+                                
                             </a>
                         </p>
                     </div>
@@ -131,5 +131,34 @@
         </footer>
     `;
 
+
+})(window.jQuery);
+
+(function ($) {
+    "use strict";
+
+    // Bestaande code om navbar en footer te laden...
+
+    // Functie om tooltips te activeren op de dienstenpagina
+    function activateTooltips() {
+        const diensten = document.querySelectorAll('.dienst'); // Selecteer alle dienst-elementen
+        diensten.forEach(dienst => {
+            dienst.addEventListener('mouseover', function() {
+                // Logica voor het tonen van de tooltip
+                this.querySelector('.tooltip').style.display = 'block';
+            });
+            dienst.addEventListener('mouseout', function() {
+                // Logica voor het verbergen van de tooltip
+                this.querySelector('.tooltip').style.display = 'none';
+            });
+        });
+    }
+
+    // Roep de functie aan zodra de document geladen is
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.querySelector('.dienst')) {
+            activateTooltips(); // Activeer tooltips alleen als er dienst-elementen zijn
+        }
+    });
 
 })(window.jQuery);
