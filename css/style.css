@@ -19,6 +19,7 @@ body {
     /*background-color: var(--white-color);*/
     background-color: var(--dark-color);
     font-family: var(--body-font-family);
+    color: var(--white-color);
 }
 .content-wrapper {
     position: relative;
@@ -30,8 +31,7 @@ body {
 /* Typography */
 h1 {
     font-size: var(--h1-font-size);
-    color: var(--dark-color);
-    font-weight: 700; /* Assuming var(--font-weight-bold) is 700 */
+    font-weight: 700;
 }
 
 h6 {
@@ -50,14 +50,13 @@ button {
 }
 a {
     display: inline-block;
-    color: var(--primary-color);
+    color: var(--white-color);
     text-decoration: none;
     transition: all 0.3s;
 }
 
 a:hover {
     color: var(--secondary-color);
-    border-radius: 70%;
 }
 
 /* Navigation */
@@ -85,7 +84,6 @@ a:hover {
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
-    color: white;
     display: block;
     text-align: left;
 }
@@ -100,7 +98,7 @@ a:hover {
 .navbar-brand:hover {
     color: var(--white-color);
     font-size: var(--h5-font-size);
-    font-weight: 700; /* Assuming var(--font-weight-bold) is 700 */
+    font-weight: 700;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -190,14 +188,7 @@ a:hover {
     color: var(--white-color);
 }
 
-.custom-border-btn {
-    background: transparent;
-    border: 2px solid var(--custom-btn-bg-color);
-    color: var(--custom-btn-bg-color);
-}
-
-.navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover,
-.custom-border-btn:hover {
+.navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover {
     background: var(--custom-btn-bg-hover-color);
     border-color: transparent;
     color: var(--white-color);
@@ -205,10 +196,6 @@ a:hover {
 .section-padding {
     padding-top: 110px;
     padding-bottom: 100px;
-}
-
-.section-overlay + .container + .content-wrapper {
-    position: relative;
 }
 
 /* Hero Section */
@@ -246,11 +233,6 @@ a:hover {
     height: 100%;
 }
 
-.tab-content {
-    background-color: var(--white-color);
-    border-radius: 20px;
-    padding: 45px;
-}
 .custom-btn {
     background: var(--custom-btn-bg-color);
     border: 2px solid transparent;
@@ -283,17 +265,29 @@ a:hover {
     height: auto; /* Maintains aspect ratio */
 }
 
+
 /*---------------------------------------
-  CUSTOM FORM
+  CONTACT FORM
 -----------------------------------------*/
-.custom-form .form-control {
+#contactMap, #afvalMap {
+    height: 511px;
+    border-radius: 20px;
+    padding: 30px;
+}
+.contact-form {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.contact-form .form-control {
     margin-bottom: 24px;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding: 13px;
     outline: none;
 }
 
-.custom-form button[type="submit"] {
+.contact-form button[type="submit"] {
     background: var(--custom-btn-bg-color);
     border: none;
     border-radius: 100px;
@@ -303,10 +297,8 @@ a:hover {
     margin-bottom: 0;
 }
 
-.custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
+.contact-form button[type="submit"]:hover, .contact-form button[type="submit"]:focus {
     background: var(--custom-btn-bg-hover-color);
-    border-color: transparent;
 }
 
 /*---------------------------------------
@@ -342,10 +334,6 @@ a:hover {
 .about-text-wrap {
     position: relative;
     color: var(--white-color)
-}
-
-.contact-form-body .radio-container label{
-    margin-right: 20px;
 }
 
 /*
