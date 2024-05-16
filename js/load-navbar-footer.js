@@ -23,7 +23,7 @@
                             <a class="nav-link click-scroll" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="topic.html">Topic</a>
+                            <a class="nav-link click-scroll" href="dashboard.html">Dashboard</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link click-scroll" href="diensten.html">Diensten</a>
@@ -89,7 +89,7 @@
                             </li>
     
                             <li class="site-footer-link-item">
-                                <a href="topic.html" class="site-footer-link">Topic</a>
+                                <a href="dashboard.html" class="site-footer-link">Dashboard</a>
                             </li>
     
                             <li class="site-footer-link-item">
