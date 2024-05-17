@@ -14,6 +14,11 @@ var circle = L.circle([51.17, 4.46], {
 
 circle.bindPopup("Neona Smart City");
 
+var logoIcon = L.icon({
+    iconUrl: 'assets/images/logo_icon.png',
+    iconSize:     [50, 50], // size of the icon
+});
 
-var marker = L.marker([51.17, 4.46]).addTo(map);
+
+var marker = L.marker([51.17, 4.46], {icon: logoIcon}).addTo(map);
 marker.bindPopup("Visit us here");

@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
+<!-- 
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px 
+-->
+
 <body>
     <header>
         <div id="navbar"></div>
@@ -52,7 +60,7 @@
                                 </p>
                             </div>
                             <figure class="col-lg-8 col-12 text-end">
-                                <img class="dienst-image" src="assets/images/diensten/afval.png" alt="Afval">
+                                <img class="img-fluid dienst-image" src="assets/images/diensten/afval.png" alt="Afval">
                                 <figcaption class="figure-caption">© ChatGPT</figcaption>
                             </figure>
                             <p class="col-12">
@@ -86,13 +94,15 @@
                             </div>
                         </div>
                         <div class="row mb-2 mt-2">
-                            <div class="col-lg-6 col-12 mt-3">
+                            <div class="col-xxl-6 col-lg-5 col-12 mt-3">
                                 <div id="afvalMap"></div>
                             </div>
-                            <div class="col-lg-6 col-12 mt-3">
-                                <table class="table text-white">
+                            <div class="table-responsive-lg col-xxl-6 col-lg-7 col-12 mt-3">
+                                <table class="table table-hover text-white">
+                                    <caption>Afval technologieën</caption>
+
                                     <thead>
-                                        <tr>
+                                        <tr class="table-dark">
                                             <th scope="col">Categorie</th>
                                             <th scope="col">Technologieēn</th>
                                             <th scope="col">Voordelen</th>
@@ -100,33 +110,33 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr class="table-success">
                                             <th scope="row">Organisch afval</th>
                                             <td>Anaerobe vergisting, Compostering</td>
                                             <td>Energieproductie, Vermindering van afval</td>
                                             <td>Biogasinstallaties die organisch afval omzetten in energie</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="table-primary">
                                             <th scope="row">Plastic afval</th>
                                             <td>Mechanische recycling, Chemische recycling</td>
                                             <td>Hergebruik van materialen, Vermindering van milieu-impact</td>
                                             <td>Installaties die plastic afval omzetten in nieuwe plastic materialen
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="table-light">
                                             <th scope="row">Glas afval</th>
                                             <td>Glasbreuk, Hergebruik</td>
                                             <td>Vermindering van grondstofgebruik</td>
                                             <td>Glasrecyclingprogramma's die oud glas omzetten in nieuw glas</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="table-warning">
                                             <th scope="row">Metaal afval</th>
                                             <td>Smelten en herfabricage</td>
                                             <td>Besparing van energie en grondstoffen</td>
                                             <td>Metaalrecyclagefaciliteiten die schroot omzetten in bruikbare metalen
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="table-info">
                                             <th scope="row">Elektronisch afval</th>
                                             <td>Demontage, Precious metal recovery</td>
                                             <td>Vermindering van gevaarlijk afval, Terugwinning van waardevolle
@@ -134,7 +144,7 @@
                                             <td>E-waste recyclingcentra die waardevolle metalen terugwinnen uit
                                                 afgedankte elektronica</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="table-danger">
                                             <th scope="row">Papier afval</th>
                                             <td>Pulping en papierfabricage</td>
                                             <td>Vermindering van ontbossing</td>

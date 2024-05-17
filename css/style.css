@@ -269,6 +269,11 @@ a:hover {
 /*---------------------------------------
   CONTACT FORM
 -----------------------------------------*/
+#energieMap {
+    height: 390px;
+    border-radius: 20px;
+    padding: 30px;
+}
 #contactMap, #afvalMap {
     height: 511px;
     border-radius: 20px;

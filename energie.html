@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Leaflet https://leafletjs.com/examples/quick-start/ -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
 </head>
 
 <body>
@@ -37,10 +44,20 @@
                             <div class="col-lg-4 col-12">
                                 <h2>Optimaliseren van energieprestaties</h2>
                                 <p>
-                                    In een stad die dagdagelijks groeit moet er goed worden nagedacht over de
-                                    energievoorzieningen. Hiervoor maakt een smart city gebruik van een netwerk dat alle
-                                    componenten in de stad verbindt, zodat ze zoveel mogelijk energie kunnen besparen.
+                                    Ontdek hoe slimme steden wereldwijd de uitdagingen van energiebeheer aanpakken door
+                                    geavanceerde technologieën te gebruiken om energieprestaties te optimaliseren. Van
+                                    geïntegreerde smart grids tot innovatieve duurzame oplossingen, onze focus ligt op
+                                    het efficiënter, duurzamer en kosteneffectiever maken van stedelijke
+                                    energiesystemen. Leer meer over hoe deze technologieën niet alleen de energiekosten
+                                    verminderen, maar ook bijdragen aan een groenere, meer verbonden gemeenschap.
                                 </p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-6 col-12 ">
+                                <div id="energieMap"></div>
+                            </div>
+                            <div class="col-lg-6 col-12">
                                 <ul>
                                     <li> <b>Gebruik van slimme meters</b>: Deze meters monitoren het energieverbruik in
                                         real-time, wat helpt bij het nauwkeurig aansturen van energiebesparingen zowel
@@ -62,6 +79,8 @@
                                         verhogen de efficiëntie. </li>
                                 </ul>
                             </div>
+                        </div>
+                        <div class="row mt-3">
                             <div class="col-12">
                                 <h2>Energieverbruik</h2>
                                 <p>
@@ -75,7 +94,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2 mt-2">
+                        <div class="row mb-2 mt-3">
                             <div class="col-lg-4 col-12">
                                 <h2>Opwekken van energie</h2>
                                 <p>
@@ -113,6 +132,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="js/load-navbar-footer.js"></script>
+    <script src="js/energie-map.js"></script>
 </body>
 
 </html>
