@@ -260,7 +260,14 @@ a:hover {
     height: auto; /* Maintains aspect ratio */
 }
 
+/*
+    Dashboard
+ */
 
+#weather-wrapper {
+    /*background-image: url("../assets/images/weather.jpg");*/
+    background-size: cover;
+}
 /*---------------------------------------
   CONTACT FORM
 -----------------------------------------*/
