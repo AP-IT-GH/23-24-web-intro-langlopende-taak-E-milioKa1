@@ -1,11 +1,11 @@
-var map = L.map('contactMap').setView([51.17, 4.46], 13);
+var map = L.map('contactMap').setView([51.229804, 4.416389], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">Mortsel</a>'
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">Neona</a>'
 }).addTo(map);
 
-var circle = L.circle([51.17, 4.46], {
+var circle = L.circle([51.229804, 4.416389], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
@@ -20,5 +20,5 @@ var logoIcon = L.icon({
 });
 
 
-var marker = L.marker([51.17, 4.46], {icon: logoIcon}).addTo(map);
+var marker = L.marker([51.229804, 4.416389], {icon: logoIcon}).addTo(map);
 marker.bindPopup("Visit us here");

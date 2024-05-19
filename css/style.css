@@ -42,11 +42,7 @@ h6 {
 p {
     font-size: var(--p-font-size);
     font-weight: 300; /* Assuming var(--font-weight-light) is 300 */
-}
-a,
-button {
-    touch-action: manipulation;
-    transition: all 0.3s;
+    text-align: justify;
 }
 a {
     display: inline-block;
@@ -265,47 +261,21 @@ a:hover {
  */
 
 #weather-wrapper {
-    /*background-image: url("../assets/images/weather.jpg");*/
     background-size: cover;
 }
 /*---------------------------------------
   CONTACT FORM
 -----------------------------------------*/
-#energieMap {
-    height: 390px;
-    border-radius: 20px;
-    padding: 30px;
-}
-#contactMap, #afvalMap {
-    height: 511px;
-    border-radius: 20px;
-    padding: 30px;
-}
-.contact-form {
-    background-color: var(--white-color);
-    color: var(--dark-color);
-    border-radius: 20px;
-    padding: 30px;
-}
-
-.contact-form .form-control {
-    margin-bottom: 24px;
-    padding: 13px;
-    outline: none;
-}
 
 .contact-form button[type="submit"] {
     background: var(--custom-btn-bg-color);
-    border: none;
-    border-radius: 100px;
-    color: var(--white-color);
-    font-size: var(--p-font-size);
-    transition: all 0.3s;
-    margin-bottom: 0;
 }
-
 .contact-form button[type="submit"]:hover, .contact-form button[type="submit"]:focus {
     background: var(--custom-btn-bg-hover-color);
+}
+
+#contactMap, #afvalMap, #energieMap, #mobiliteitMap {
+    min-height: 400px;
 }
 
 /*---------------------------------------
@@ -313,15 +283,6 @@ a:hover {
 -----------------------------------------*/
 .about-section {
     background-color: var(--nav-background-color);
-    padding: 2.5%;
-    margin-bottom: 2%;
-    position: relative;
-    color: var(--white-color)
-}
-
-.about-image {
-    border-radius: 20px;
-    display: block;
 }
 
 @keyframes fadeIn {
@@ -344,15 +305,10 @@ a:hover {
     DIENSTEN
  */
 .diensten-section, .dienst-section  {
-    text-align: center;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    padding: 30px;
-    margin-bottom: 30px;
     max-width: 85%;
-    color: var(--white-color);
     z-index: 4;
+    background-position: center;
+    background-size: cover;
 }
 .diensten-section {
     background-image: url("../assets/images/diensten/lightbulb.jpg");
@@ -360,13 +316,7 @@ a:hover {
 .dienst-section {
     background-image: url("../assets/images/diensten/background-diensten.jpg");
 }
-.dienst-image {
-    width: 100%;
-}
-.dienst-section li {
-    text-align: left;
-    padding-bottom: 5px;
-}
+
 .content-title {
     position: relative;
     bottom: 66px;
