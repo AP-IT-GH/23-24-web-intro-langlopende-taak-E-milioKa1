@@ -16,19 +16,10 @@
 }
 
 body {
-    /*background-color: var(--white-color);*/
     background-color: var(--dark-color);
     font-family: var(--body-font-family);
     color: var(--white-color);
 }
-.content-wrapper {
-    position: relative;
-    overflow: hidden;
-    /*height: calc(100vh - 430px);*/
-    padding-top: 100px;
-    z-index: 2;
-}
-/* Typography */
 h1 {
     font-size: var(--h1-font-size);
     font-weight: 700;
@@ -99,11 +90,8 @@ a:hover {
 }
 
 .navbar-nav .nav-link {
-    display: inline-block;
     color: var(--white-color);
     font-size: var(--p-font-size);
-    font-weight: 400; /* Assuming var(--font-weight-normal) is 400 */
-    position: relative;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -174,19 +162,10 @@ a:hover {
     top: 8px;
 }
 
-.custom-btn:hover {
-    background: var(--custom-btn-bg-hover-color);
-    color: var(--white-color);
-}
-
 .navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover {
     background: var(--custom-btn-bg-hover-color);
     border-color: transparent;
     color: var(--white-color);
-}
-.section-padding {
-    padding-top: 110px;
-    padding-bottom: 100px;
 }
 
 /* Hero Section */
@@ -224,6 +203,13 @@ a:hover {
     height: 100%;
 }
 
+.content-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    z-index: 2;
+}
+
 .custom-btn {
     background: var(--custom-btn-bg-color);
     border: 2px solid transparent;
@@ -234,6 +220,10 @@ a:hover {
     line-height: normal;
     transition: all 0.3s;
     padding: 10px 20px;
+}
+.custom-btn:hover {
+    background: var(--custom-btn-bg-hover-color);
+    color: var(--white-color);
 }
 
 /* Video */
@@ -255,10 +245,6 @@ a:hover {
     width: 100px; /* Adjust as needed */
     height: auto; /* Maintains aspect ratio */
 }
-
-/*
-    Dashboard
- */
 
 #weather-wrapper {
     background-size: cover;
@@ -296,11 +282,6 @@ a:hover {
     animation-delay: 3s; /* Starts animation 3 seconds after the element is rendered */
 }
 
-.about-text-wrap {
-    position: relative;
-    color: var(--white-color)
-}
-
 /*
     DIENSTEN
  */
@@ -320,35 +301,20 @@ a:hover {
 .content-title {
     position: relative;
     bottom: 66px;
-    text-align: center;
     z-index: 3;
 }
 .content-title span {
     background: #009ff5;
-    padding: 1rem;
-    border-radius: 25px;
-    font-size: 46px;
-    /*max-width: 50%;*/
 }
 
-.diensten-links {
-    text-align: left;
-}
-.diensten-rechts {
-    text-align: right;
-}
-.dienst {
-    padding-bottom: 1em;
-}
 .dienst img {
     width: 100%;
     height: 200px; /* adjust based on your design needs */
     max-width: 350px;
     object-fit: cover; /* ensures the image covers the set dimensions without distortion */
 }
+
 .dienst a h6 {
-    padding: 0.4em;
-    text-align: center;
     background-color: var(--nav-background-color);
 }
 
@@ -356,65 +322,44 @@ a:hover {
     background-color: var(--secondary-color);
 }
 
+.diensten-mobile-lightbulb {
+    display: none;
+}
+
+.dienst:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dienst:hover::after {
+    opacity: 1;
+}
+
 /*---------------------------------------
   SITE FOOTER
 -----------------------------------------*/
-.site-footer {
-    background-color: var(--dark-color);
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 10px;
-}
-
 .site-footer-top {
     background-color: var(--secondary-color);
-    background-repeat: no-repeat;
-    margin-bottom: 22px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.site-footer-bottom {
-    border-top: 1px solid #1f1c1c;
 }
 
 .site-footer-title {
     color: var(--primary-color);
 }
 
-.site-footer-link,
-.copyright-text {
-    color: var(--white-color);
-}
-
-.site-footer-links {
-    padding-left: 0;
-}
-
-.site-footer-link-item {
-    list-style: none;
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.copyright-text {
-    font-size: 16px;
-}
-
 /*---------------------------------------
   SOCIAL ICON
 -----------------------------------------*/
-.social-icon {
-    margin: 0;
-    padding: 0;
-}
-
-.social-icon-item {
-    list-style: none;
-    display: inline-block;
-    vertical-align: top;
-}
-
 .social-icon-link {
     background: var(--secondary-color);
     border-radius: 100px;
@@ -440,52 +385,6 @@ a:hover {
 
 .social-icon-link span:hover::before{
     animation: spinAround 2s linear infinite;
-}
-.diensten-mobile-lightbulb {
-    display: none;
-}
-
-.dienst {
-    position: relative;
-    cursor: pointer;
-}
-.tooltip {
-    display: none; /* Verborgen totdat deze wordt gehoverd */
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    z-index: 1001;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.dienst:hover .tooltip {
-    display: block !important; /* Forceert de tooltip om te tonen, zelfs als andere stijlen dit proberen te overschrijven */
-}
-
-.dienst:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 100%;
-    white-space: nowrap;
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 6px;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.dienst:hover::after {
-    opacity: 1;
 }
 
 /* Responsive Styles */
@@ -515,10 +414,6 @@ a:hover {
     .dienst-section {
         bottom: 0;
     }
-    .diensten-links, .diensten-rechts {
-        text-align: center;
-        padding-top: 20px;
-    }
     .dienst img {
         max-width: fit-content;
         height: auto;
@@ -528,21 +423,5 @@ a:hover {
     }
     .diensten-section .content-title {
         bottom: -30px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .custom-btn {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-    .navbar a .logo {
-        margin-right: 35%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 52px;
     }
 }
